@@ -1,0 +1,43 @@
+{
+  "name": "readability-from-string",
+  "version": "0.1.0",
+  "description": "Run mozilla/readability on an HTML string",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joakimbeng/readability-from-string.git"
+  },
+  "keywords": [
+    "readability",
+    "string",
+    "html"
+  ],
+  "author": {
+    "name": "Joakim Carlstein",
+    "email": "joakim@beng.se",
+    "url": "http://joakim.beng.se"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joakimbeng/readability-from-string/issues"
+  },
+  "homepage": "https://github.com/joakimbeng/readability-from-string#readme",
+  "xo": {
+    "envs": [
+      "node"
+    ]
+  },
+  "devDependencies": {
+    "ava": "^0.13.0",
+    "xo": "^0.13.0"
+  },
+  "dependencies": {
+    "readability-node": "^0.1.0"
+  }
+}
