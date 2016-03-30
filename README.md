@@ -4,7 +4,7 @@
 
 > Run [mozilla/readability](https://github.com/mozilla/readability) on an HTML string
 
-This is just a convenience wrapper around [jsdom](https://github.com/tmpvar/jsdom) and [mozilla/readability](https://github.com/mozilla/readability).
+This is just a convenience wrapper around [mozilla/readability](https://github.com/mozilla/readability).
 
 ## Installation
 

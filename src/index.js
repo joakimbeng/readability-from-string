@@ -1,9 +1,9 @@
 'use strict';
 const url = require('url');
-const jsdom = require('jsdom').jsdom;
 const readability = require('readability-node');
 
 const Readability = readability.Readability;
+const JSDOMParser = readability.JSDOMParser;
 
 module.exports = exports = function (html, options) {
 	options = options || {};
@@ -11,12 +11,11 @@ module.exports = exports = function (html, options) {
 		throw new Error('Missing href option!');
 	}
 	const uri = url.parse(options.href);
-	const doc = jsdom(html.trim(), {
-		features: {
-			FetchExternalResources: false,
-			ProcessExternalResources: false
-		}
-	});
+	const parser = new JSDOMParser();
+	const doc = parser.parse(html.trim());
+	if (parser.errorState) {
+		throw new Error(parser.errorState);
+	}
 	const readabilityUrl = toReadabilityUrl(uri);
 	const reader = new Readability(readabilityUrl, doc);
 	return reader.parse();
