@@ -1,6 +1,6 @@
 {
   "name": "readability-from-string",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Run mozilla/readability on an HTML string",
   "main": "src/index.js",
   "directories": {
@@ -38,6 +38,7 @@
     "xo": "^0.13.0"
   },
   "dependencies": {
+    "jsdom": "^8.2.0",
     "readability-node": "^0.1.0"
   }
 }
